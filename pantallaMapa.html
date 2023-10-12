@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RemplApp</title>
+  <link rel="shortcut icon" href="src/img/RemplApp.ico" type="image/x-icon">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.2/dist/leaflet.css"
+    integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14=" crossorigin="" />
+</head>
+
+<body>
+
+  <div class="container-fluid vh-100 d-flex flex-column">
+    <div class="row flex-grow-1">
+      <div class="col-12 col-md-6 p-0 d-md-block order-2 order-md-1">
+        <div id="map"></div>
+      </div>
+
+      <div
+        class="col-12 col-md-6 d-flex justify-content-center align-items-center bg-light style-box2 order-1 order-md-2">
+        <div class="box-text d-flex align-items-center flex-column m-20">
+          <img src="RemplApp.png" alt="" srcset="">
+          <h1>Encuentra Tu Camino Educativo</h1>
+          <p>Descubre tu futuro en cada aula</p>
+          <div class="form-style">
+            <form method="POST" class="grup-btns">
+              <a href="./Postulaciones.html">
+                <button class="btn btn-primary" type="button">Mis postulaciones</button>
+              </a>
+              <button class="btn btn-primary" onclick="swal('El filtro no se encuentra disponible momentaneamente.');"
+                type="button">Filtros de busqueda</button>
+            </form>
+          </div>
+          <h5>Seleccione la escuela deseada</h5>
+          <select name="select-location" id="select-location" required class="form-select selected-options">
+            <option value="" disabled selected>Seleccionar ubicación</option>
+            <option value="-32.9421547,-60.6531765">Escuela Superior De Comercio N° 49 "Justo Jose De Urquiza"</option>
+            <option value="-32.9431762,-60.6534907">Colegio Marista Nuestra Señora del Rosario</option>
+            <option value="-32.9459982,-60.6542217">Colegio Misericordia Rosario</option>
+            <option value="-32.9438334,-60.6517056">Escuela Normal Superior Nº2 Provincial Nº35</option>
+            <option value="-32.9542273,-60.6360999">Colegio Cristo Rey</option>
+            <option value="-32.9495059,-60.651624">Colegio Sagrado Corazón de Rosario</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="https://unpkg.com/leaflet@1.9.2/dist/leaflet.js"
+      integrity="sha256-o9N1jGDZrf5tS+Ft4gbIK7mYMipq9lqpVJ91xHSyKhg=" crossorigin=""></script>
+    <script src="src/js/mapa.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+      crossorigin="anonymous"></script>
+
+</body>
+
+</html>
